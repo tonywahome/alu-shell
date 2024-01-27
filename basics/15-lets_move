@@ -1,2 +1,2 @@
 #!/bin/bash
-mv A.txt /tmp/u/A.txt
+mv ./[A-Z]* /tmp/u
