@@ -1,2 +1,2 @@
 #!/bin/bash
-sed 'y/Ac/Ze/' input.txt > output.txt
+cat input.txt | tr 'Ac' 'Ze'
