@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "The output is: $output"
+sed 'y/Ac/Ze/' input.txt > output.txt
