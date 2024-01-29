@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$last" >> iacta
+echo "$last_line" >> iacta
