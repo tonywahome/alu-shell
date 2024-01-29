@@ -1,2 +1,2 @@
 #!/bin/bash
-output="" while IFS= read -r line+ do output="$output${line:0:1}"done < input.txt echo "$output"
+cut -c 1 | paste -s -d ''
