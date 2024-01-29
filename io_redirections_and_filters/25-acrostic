@@ -1,2 +1,2 @@
 #!/bin/bash
-while IFS= read -r line + do echo -n "${line:0:1}"+ done < input.txt+ echo
+output="" while IFS= read -r line+ do output="$output${line:0:1}"done < input.txt echo "$output"
