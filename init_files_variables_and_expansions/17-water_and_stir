@@ -1,0 +1,2 @@
+#!/bin/bash
+sum=$((water + stir)) + echo "obase=bestchol; $sum" | bc
