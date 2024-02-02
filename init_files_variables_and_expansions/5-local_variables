@@ -1,2 +1,2 @@
 #!/bin/bash
-typeset -m VARIABLE*+ set+ declare -F
+typeset -m VARIABLE*+ set + declare -F
