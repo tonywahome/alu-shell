@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 # initialize hour and minute counters
-hour=o
-minute=1
+
+hour=0
 while [ $hour -le 12 ]
 do
-   formatted_hour=$(printf "%02d" $hour)
-   formatted_minute=$(printf "%02d" $minute)
-   echo "$formatted_hour:$formatted_minute"
-   ((minute++))
-  if [ $minute -eq 60 ]; then
-        minute=1
-        ((hour++))
-    fi
+    echo "Hour: $hour"
+    minutes=1
+    while [ $minutes -lt 60 ]
+    do
+	echo "$minutes"
+	((minutes++))
+    done
+    ((hour++))
 done
 
