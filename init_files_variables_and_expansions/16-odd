@@ -1,2 +1,2 @@
 #!/bin/bash
-if ((count++ % 2 == 0))+ then  echo "$line"    fi done
+paste -d, - - | cut -d, -f1
