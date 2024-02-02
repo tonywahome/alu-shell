@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #initialize a counter count
+counter=0
 while [ $ counter -lt 10 ]
 do
 	echo "Best School"
