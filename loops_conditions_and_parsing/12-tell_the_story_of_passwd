@@ -1,13 +1,20 @@
 #!/usr/bin/env bash
 #using a while loop and IFS to extract relevant info for every user
-while IFS=: read -r username _ userid _ homedir _ shell _
-  do
-   group_id="Gang of Rebels"
-   command_shell="hoverboard"
-   password=$(openssl rand -base64 10 | tr -d '/+' | cut -c1-8)
-echo "The user $username is part of the $group_id, lives in $homedir, and rides a $command_shell."
-    echo "User ID $userid's place is protected by the passcode $password."
-    echo "For more info about the user, check out the mysterious USER ID INFO."
-    echo
-done < /etc/passwd
+
+while IFS= read -r line
+do
+    username=$(echo "$line" | cut -f 1 -d ':')
+    password=$(echo "$line" | cut -f 2 -d ':')
+    userID=$(echo "$line" | cut -f 3 -d ':')
+    groupID=$(echo "$line" | cut -f 4 -d ':')
+    userINFO=$(echo "$line" | cut -f 5 -d ':')
+    home=$(echo "$line" | cut -f 6 -d ':')
+    command=$(echo "$line" | cut -f 7 -d ':')
+
+
+    echo -n "The user $username is part of the $groupID gang, "
+    echo -n "lives in $home and rides $command."
+    echo -n " $userID's place is protected by the passcode $password, "
+    echo "more info about the user here: $userINFO"
+done < "/etc/passwd"
 
