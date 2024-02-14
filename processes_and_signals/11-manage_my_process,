@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#managing process
+#managing processes
 start () {                                         
     ./manage_my_process &                          
     echo $! > /var/run/my_process.pid              
@@ -28,4 +28,3 @@ estart}"
                                                    
       ;;                                           
 esac              
-
